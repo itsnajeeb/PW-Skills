@@ -1,0 +1,52 @@
+Question-2 :- Write a short note on File base storage system. Explain the major challenges of a File-based storage system
+
+A File-based storage system is a method of storing and organizing data in a file system, where data is stored in files that can be accessed and managed by an operating system. These systems use traditional file formats (such as .txt, .jpg, .csv, etc.) to store information, and users or applications can read, write, and modify these files using standard file I/O operations.
+
+Key Characteristics:
+    1. Data Organization: Files are organized in a hierarchical folder structure.
+    2. File Formats: Files can contain different types of data (text, images, videos, etc.).
+    3. File Management: Files are managed using basic file system commands (e.g., create, read, write, delete).
+    4. File Access: Applications access data through file paths, which point to specific locations on disk storage.
+
+Major Challenges of a File-Based Storage System.
+While file-based storage systems are simple and easy to use, they come with several limitations and challenges, especially when managing large volumes of data or complex data structures. Some of the major challenges are:
+
+1. Data Redundancy:
+
+    > Problem: In a file-based system, data might be duplicated across multiple files, which can lead to inconsistencies. If the same data is stored in multiple files, it becomes difficult to update all instances, leading to data redundancy and potential errors.
+    > Example: Multiple text files containing similar customer information, where updates in one file may not be reflected in others.
+
+2. Data Integrity:
+
+    > Problem: There is no built-in mechanism to ensure data consistency. For instance, if one application modifies a file while another is reading or writing it, this can lead to corruption or loss of data.
+    >Example: If a user is writing to a file and the system crashes midway, part of the file might become corrupted, leaving data in an inconsistent state.
+
+
+3. Scalability:
+
+    > Problem: File systems do not scale well for large datasets or complex applications. As the amount of data increases, it becomes harder to manage and search through files, leading to inefficiencies.
+    > Example: A business may struggle to find a specific report among thousands of files, as file systems don't provide the same advanced querying capabilities as databases.
+
+
+4. Limited Data Security:
+
+    > Problem: File systems often lack robust access control mechanisms. While permissions can be set at the file level, finer-grained control over individual data entries or records is difficult to achieve.
+    > Example: Multiple users may have access to the entire file, but there is no way to restrict access to sensitive data within that file without complex workarounds.
+
+
+5. Concurrency Issues:
+
+    > Problem: File-based systems struggle with handling multiple users or applications accessing the same file simultaneously. Concurrency issues, such as two users trying to modify the same file at the same time, can result in conflicts or data loss.
+    > Example: Two employees working on a report simultaneously might accidentally overwrite each other’s changes if they are using the same file.
+
+
+6. Lack of Advanced Data Retrieval:
+
+    > Problem: Unlike databases, file systems don't provide efficient methods for searching, filtering, or querying data. If you need to find specific information in a large dataset, it often requires opening and reading through the files manually or writing custom programs to search the file contents.
+    > Example: Searching for a customer's name across thousands of text files can be a slow and cumbersome process.
+
+
+7. Backup and Recovery Issues:
+
+    > Problem: While file systems may support basic file-level backups, they lack comprehensive mechanisms for ensuring that backups are consistent or complete across related files. In case of a system failure, recovering the entire data set may be difficult and error-prone.
+    > Example: A user may lose access to a project if only part of the data (like the document files) is backed up, while the associated data (like configuration files) is left out.

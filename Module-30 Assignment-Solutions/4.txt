@@ -1,0 +1,39 @@
+Question-4 :- Explain 5 challenges of file-based storage system which was tackled by DBMS
+
+The File-based storage system presents several challenges that are resolved by a Database Management System (DBMS). Below are five major challenges of file-based systems and how a DBMS addresses them:
+
+1. Data Redundancy and Inconsistency.
+
+    Challenge in File-based System:
+        In a file-based storage system, data is often duplicated across multiple files. For example, a customer’s contact details may be stored in multiple files (sales, billing, and customer support). If a change occurs (e.g., the customer updates their phone number), it must be manually updated in each file. This increases the risk of data redundancy (duplicate data) and data inconsistency (different versions of the same data).
+
+    How DBMS Solves This:
+        A DBMS centralizes data storage in a single location (the database) and enforces normalization, which organizes data to reduce redundancy. The DBMS uses primary keys and foreign keys to maintain relationships between data, ensuring consistency. This way, updates are made in one place, and related data is updated automatically, ensuring data integrity across the system.
+
+2. Difficulty in Data Retrieval
+
+    Challenge in File-based System:
+        In file-based systems, data is typically stored in plain text files, spreadsheets, or similar formats. Searching for specific data can be slow and inefficient, especially when the dataset grows large. For example, to find a particular customer’s details, one might need to manually open and search through several files, which can be time-consuming and error-prone.
+
+    How DBMS Solves This:
+        A DBMS provides a structured query language (SQL) for querying data, making it easy to retrieve specific records or perform complex searches with a few commands. By using indexing and optimized querying techniques, DBMSs allow for much faster and more efficient data retrieval, even from very large datasets. For example:
+
+3. Data Security and Access Control
+
+    Challenge in File-based System:
+        In a file-based system, securing data is a challenge. Access control is typically limited to file-level permissions (e.g., read, write, execute). If multiple users need to access data, it's difficult to control who can access which specific data within a file. This increases the risk of unauthorized access or accidental data modification.
+    How DBMS Solves This:
+        > A DBMS offers advanced data security features such as:
+        > Role-based access control (RBAC): Users are assigned roles with specific permissions (e.g., read-only, update, delete).
+        > Granular access: Access control can be applied to specific tables, columns, or even rows, ensuring sensitive data is only accessible by authorized users.
+        > Encryption: DBMSs provide encryption mechanisms for protecting sensitive data, both at rest and in transit.
+
+
+4. Concurrency Control
+    Challenge in File-based System:
+        > In a file-based system, if multiple users try to access and modify the same file simultaneously, it can result in conflicts or data corruption. For example, two users could open the same text file, make changes, and then save the file, which might overwrite each other’s work or leave the file in an inconsistent state.
+
+    How DBMS Solves This:
+        > A DBMS provides robust concurrency control mechanisms that allow multiple users to access and modify the data simultaneously without conflicts. This is achieved through:
+        > Locking mechanisms: The DBMS uses locks to prevent two users from modifying the same piece of data at the same time.
+        > Transaction management: DBMSs ensure that transactions are atomic (all operations succeed or fail together) and follow the ACID properties (Atomicity, Consistency, Isolation, Durability), ensuring data integrity even in multi-user environments.
