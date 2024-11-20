@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="app.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <!-- Quiz Container -->
+  <div id="quiz-container" class="bg-white shadow-lg rounded-lg p-6 w-[600px]  ">
+    <div class="text-center bg-gray-700 text-white px-3 py-2">
+      <h1 class="text-2xl font-bold mb-4 ">Quiz App</h1>
+      <div class="flex justify-between text-lg ">
+        <span id="question-number">Question 1/10</span>
+        <span id="score">Score: 0</span>
+      </div>
+    </div>
+    <div id="question-section" class="mt-4">
+      <p id="question-text" class="text-lg font-medium">What is 2 + 2?</p>
+      <div id="options" class="mt-4 space-y-2">
+        <!-- Options will be injected here -->
+      </div>
+    </div>
+    <button id="next-btn" class="bg-blue-500 text-white px-10 py-3 rounded mt-4 hover:bg-blue-600">
+      Next
+    </button>
+    <button id="restart-btn" class="bg-gray-500 text-white px-4 py-3 rounded mt-4 hover:bg-gray-600 hidden">
+      Restart Quiz
+    </button>
+  </div>
+
+</body>
+</html>
